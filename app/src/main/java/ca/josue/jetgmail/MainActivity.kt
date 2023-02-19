@@ -14,8 +14,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import ca.josue.jetgmail.components.GmailDrawerMenu
+import ca.josue.jetgmail.model.GmailDrawerMenu
 import ca.josue.jetgmail.components.HomeAppBar
+import ca.josue.jetgmail.components.HomeBottomMenu
 import ca.josue.jetgmail.ui.theme.JetGmailTheme
 
 class MainActivity : ComponentActivity() {
@@ -47,7 +48,8 @@ fun JetGmailApp() {
         topBar = { HomeAppBar(scaffoldState = scaffoldState, scope = coroutineScope) },
         drawerContent = {
             GmailDrawerMenu(scrollState)
-        }
+        },
+        bottomBar = { HomeBottomMenu() },
     ) {
 
     }

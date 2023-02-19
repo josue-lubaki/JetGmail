@@ -1,4 +1,4 @@
-package ca.josue.jetgmail.components
+package ca.josue.jetgmail.model
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.ScrollState
