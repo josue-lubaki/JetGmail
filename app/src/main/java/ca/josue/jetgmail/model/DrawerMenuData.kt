@@ -1,4 +1,4 @@
-package ca.josue.jetgmail
+package ca.josue.jetgmail.model
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AllInbox

@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">JetGmail</string>
     <string name="jetgmail_logo">Logo JetGmail</string>
+    <string name="star_icon">star Icon</string>
 </resources>
