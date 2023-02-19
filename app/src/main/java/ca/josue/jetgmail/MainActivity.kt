@@ -5,19 +5,21 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import ca.josue.jetgmail.components.GmailDrawerMenu
+import ca.josue.jetgmail.components.GmailFab
 import ca.josue.jetgmail.components.HomeAppBar
 import ca.josue.jetgmail.components.HomeBottomMenu
 import ca.josue.jetgmail.components.MailList
@@ -54,8 +56,9 @@ fun JetGmailApp() {
             GmailDrawerMenu(scrollState)
         },
         bottomBar = { HomeBottomMenu() },
+        floatingActionButton = { GmailFab(scrollState) }
     ) {
-        MailList(it)
+        MailList(it, scrollState)
     }
 }
 
