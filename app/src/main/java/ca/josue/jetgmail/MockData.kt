@@ -53,7 +53,8 @@ val mailsList = listOf(
         username = "Google",
         subject = "Welcome to Gmail",
         body = "Welcome to Gmail. We're glad you're here. We're here to help you get the most out of your new email account. This guide will help you get started with Gmail and learn how to use it to its full potential. We'll show you how to send and receive email, manage your contacts, and customize your Gmail settings. We'll also show you how to use Gmail's powerful search features to find messages quickly and easily. Let's get started!",
-        timestamp = "10:23"
+        timestamp = "10:23",
+        isStarred = true
     ),
     MailData(
         mailId = 10,
@@ -75,5 +76,5 @@ val mailsList = listOf(
         subject = "New opportunity that suits you",
         body = "Hi, I'm Jobs. I'm a recruiter at Jobs. I'm looking for a software developer. I think you are the right person for this job. I hope you like it!",
         timestamp = "07:37"
-    )
+    ),
 )

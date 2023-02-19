@@ -3,8 +3,10 @@ package ca.josue.jetgmail.components
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.spring
-import androidx.compose.foundation.background
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -15,20 +17,20 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Star
-import androidx.compose.material.icons.filled.StarOutline
 import androidx.compose.material.icons.outlined.StarOutline
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -44,13 +46,9 @@ import ca.josue.jetgmail.R
 import ca.josue.jetgmail.mailsList
 import ca.josue.jetgmail.model.MailData
 import ca.josue.jetgmail.ui.theme.StarColor
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
 
 @Composable
-fun MailList(paddingValues: PaddingValues) {
-    val mockData = mailsList
-
+fun MailList(paddingValues: PaddingValues, scrollState: ScrollState) {
     Box(
         modifier = Modifier.padding(paddingValues)
     ){
@@ -58,8 +56,9 @@ fun MailList(paddingValues: PaddingValues) {
             modifier = Modifier
                 .fillMaxSize()
                 .padding(8.dp)
+                .scrollable(scrollState, Orientation.Vertical)
         ){
-            items(mockData){
+            items(mailsList){
                 MailItem(mailData = it)
             }
         }
@@ -91,14 +90,16 @@ fun MailItem(mailData: MailData, modifier: Modifier = Modifier) {
        }
 
         Column(
-            modifier = Modifier.weight(2f).animateContentSize(
-                animationSpec = spring(
-                    dampingRatio = Spring.DampingRatioLowBouncy,
-                    stiffness = Spring.StiffnessLow,
+            modifier = Modifier
+                .weight(2f)
+                .animateContentSize(
+                    animationSpec = spring(
+                        dampingRatio = Spring.DampingRatioLowBouncy,
+                        stiffness = Spring.StiffnessLow,
+                    )
                 )
-            )
                 .clickable {
-                      isClicked = !isClicked
+                    isClicked = !isClicked
                 },
         ){
             Text(
@@ -130,7 +131,9 @@ fun MailItem(mailData: MailData, modifier: Modifier = Modifier) {
                 onClick = {
 
                 },
-                modifier = Modifier.size(50.dp).padding(top = 8.dp, start = 16.dp)
+                modifier = Modifier
+                    .size(50.dp)
+                    .padding(top = 8.dp, start = 16.dp)
             ){
                 Icon(
                     imageVector = if(mailData.isStarred) Icons.Filled.Star else Icons.Outlined.StarOutline,
@@ -161,5 +164,6 @@ fun MailItemPreview() {
 fun MailListPreview() {
     MailList(
         paddingValues = PaddingValues(16.dp),
+        rememberScrollState()
     )
 }
