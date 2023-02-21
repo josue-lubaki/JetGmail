@@ -11,6 +11,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Divider
+import androidx.compose.material.Icon
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -24,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ca.josue.jetgmail.model.DrawerMenuData
 import ca.josue.jetgmail.R
+import ca.josue.jetgmail.ui.theme.contentColor
 
 @Composable
 fun GmailDrawerMenu(scrollState: ScrollState) {
@@ -75,7 +78,7 @@ fun GmailDrawerMenu(scrollState: ScrollState) {
            Text(
                modifier = Modifier.weight(1f),
                text = stringResource(R.string.google),
-               color = Color.Black.copy(alpha = 0.6f),
+               color = colors.contentColor.copy(alpha = 0.6f),
                fontSize = 20.sp,
                fontWeight = FontWeight.Bold,
            )
@@ -119,10 +122,11 @@ fun MailDrawerItem(item : DrawerMenuData) {
             .padding(top = 16.dp),
         verticalAlignment = Alignment.CenterVertically,
     ){
-        Image(
+        Icon(
             modifier = Modifier.weight(0.15f),
             imageVector = item.icon!!,
             contentDescription = item.title,
+            tint = colors.contentColor
         )
         Text(
             text = item.title!!,
