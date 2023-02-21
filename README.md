@@ -2,20 +2,12 @@
 JetGmail est une application de messagerie électronique qui utilise la technologie Jetpack Compose pour fournir une expérience utilisateur rapide et fluide. Clone de l'application Gmail
 
 ## Demo Light Mode
-<table border="2">
-    <tr>
-        <th align="center">LIGHT MODE</th>
-        <th align="center">DARK MODE</th>
-    </tr>
-    <tr>
-        <td>
-            [![Watch the video](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/1d86df60-c735-4c64-baf1-70e6d78a2e32.gif?ClientID=vimeo-core-prod&Date=1676965737&Signature=cbf763f15020337929bfd5701fac4c951aa161af)](https://player.vimeo.com/video/800766631)
-        </td>
-        <td>
-            [![Watch the video](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/8114acdb-dc1e-4247-8329-d54f0083263f.gif?ClientID=vimeo-core-prod&Date=1676965718&Signature=f2ed5dbf89f57c31bf8bf53035e5fc21e43dcf1e)](https://player.vimeo.com/video/800766699)
-        </td>
-    </tr>
-</table>
+
+[![Watch the video](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/1d86df60-c735-4c64-baf1-70e6d78a2e32.gif?ClientID=vimeo-core-prod&Date=1676965737&Signature=cbf763f15020337929bfd5701fac4c951aa161af)](https://player.vimeo.com/video/800766631)
+
+## Demo Dark Mode
+
+[![Watch the video](https://videoapi-muybridge.vimeocdn.com/animated-thumbnails/image/8114acdb-dc1e-4247-8329-d54f0083263f.gif?ClientID=vimeo-core-prod&Date=1676965718&Signature=f2ed5dbf89f57c31bf8bf53035e5fc21e43dcf1e)](https://player.vimeo.com/video/800766699)
 
 ## Screenshots
 
