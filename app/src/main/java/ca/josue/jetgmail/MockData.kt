@@ -1,5 +1,7 @@
 package ca.josue.jetgmail
 
+import androidx.compose.ui.res.painterResource
+import ca.josue.jetgmail.model.AccountData
 import ca.josue.jetgmail.model.MailData
 
 //Todo 12: create a new file Mock Data with a dummy mail list
@@ -77,4 +79,13 @@ val mailsList = listOf(
         body = "Hi, I'm Jobs. I'm a recruiter at Jobs. I'm looking for a software developer. I think you are the right person for this job. I hope you like it!",
         timestamp = "07:37"
     ),
+)
+
+val accountList = listOf(
+    AccountData(
+        username = "Josue Lubaki",
+        email = "josue.lubaki@uqtr.ca",
+        avatar = R.drawable.avatar,
+        unReadCount = 99,
+    )
 )

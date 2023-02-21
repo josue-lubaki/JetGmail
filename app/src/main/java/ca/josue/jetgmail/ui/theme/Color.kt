@@ -1,5 +1,7 @@
 package ca.josue.jetgmail.ui.theme
 
+import androidx.compose.material.Colors
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 
 val Purple80 = Color(0xFFD0BCFF)
@@ -11,3 +13,11 @@ val PurpleGrey40 = Color(0xFF625b71)
 val Pink40 = Color(0xFF7D5260)
 
 val StarColor = Color(0xFFFFD700)
+
+@get:Composable
+val Colors.contentColor : Color
+    get() = if (isLight) Color.Black else Color.White
+
+@get:Composable
+val Colors.backgroundColor : Color
+    get() = if (isLight) Color.White else Color.DarkGray

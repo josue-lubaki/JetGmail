@@ -15,6 +15,7 @@ import androidx.compose.material.Card
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.MaterialTheme.colors
 import androidx.compose.material.ScaffoldState
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
@@ -33,6 +34,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import ca.josue.jetgmail.R
+import ca.josue.jetgmail.ui.theme.contentColor
 import ca.josue.jetgmail.ui.theme.spacing
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
@@ -65,14 +67,16 @@ fun HomeAppBar(
                 }){
                     Icon(
                         Icons.Default.Menu,
-                        contentDescription = "Menu"
+                        contentDescription = "Menu",
+                        tint = colors.contentColor
                     )
                 }
                 Text(
                     modifier = Modifier
                         .padding(start = MaterialTheme.spacing.small)
                         .weight(2f),
-                    text = "Search in email"
+                    text = "Search in email",
+                    color = colors.contentColor
                 )
                 Image(
                     modifier = Modifier
