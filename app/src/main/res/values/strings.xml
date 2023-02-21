@@ -2,4 +2,6 @@
     <string name="app_name">JetGmail</string>
     <string name="jetgmail_logo">JetGmail Logo</string>
     <string name="star_icon">star Icon</string>
+    <string name="manage_your_gmail_account">Manage your Gmail account</string>
+    <string name="google">Google</string>
 </resources>

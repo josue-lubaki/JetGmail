@@ -67,15 +67,15 @@ fun GmailDrawerMenu(scrollState: ScrollState) {
        ){
            Image(
                modifier = Modifier
-                   .size(30.dp)
+                   .size(36.dp)
                    .weight(0.15f),
-               painter = painterResource(id = R.drawable.logo_jetgmail),
+               painter = painterResource(id = R.drawable.ggle),
                contentDescription = stringResource(R.string.jetgmail_logo),
            )
            Text(
                modifier = Modifier.weight(1f),
-               text = "JetGmail",
-               color = Color.Red,
+               text = stringResource(R.string.google),
+               color = Color.Black.copy(alpha = 0.6f),
                fontSize = 20.sp,
                fontWeight = FontWeight.Bold,
            )

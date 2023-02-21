@@ -48,10 +48,15 @@ fun JetGmailApp() {
     val scaffoldState = rememberScaffoldState()
     val coroutineScope = rememberCoroutineScope()
     val scrollState = rememberScrollState()
+    val openDialog = remember { mutableStateOf(false) }
 
     Scaffold(
         scaffoldState = scaffoldState,
-        topBar = { HomeAppBar(scaffoldState = scaffoldState, scope = coroutineScope) },
+        topBar = { HomeAppBar(
+            scaffoldState = scaffoldState,
+            scope = coroutineScope,
+            openDialog = openDialog
+        ) },
         drawerContent = {
             GmailDrawerMenu(scrollState)
         },
