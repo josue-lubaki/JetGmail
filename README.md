@@ -39,7 +39,7 @@ JetGmail est une application de messagerie électronique qui utilise la technolo
     </tr>
     <tr>
         <th align="center"> Profile </th>
-        <td align="center"> <img src="https://i.imgur.com/lwkHe66.png" width=360 height=760 /></td>
+        <td align="center"> <img src="https://i.imgur.com/9N440S4.png" width=360 height=760 /></td>
         <td align="center"> <img src="https://i.imgur.com/17VB9UA.png" width=360 height=760 /></td>
     </tr>
 </table>
